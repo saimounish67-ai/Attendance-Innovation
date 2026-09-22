@@ -1,0 +1,16 @@
+{
+  "name": "inovation",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "setup": "npm --prefix server install && npm --prefix client install",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently -k \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
